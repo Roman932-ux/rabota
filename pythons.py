@@ -1,16 +1,29 @@
+﻿
 
-from random import randint
- 
-N = 10
-a = []
-for i in range(N):
-    a.append(randint(1, 99))
-print(a)
- 
- 
-for i in range(N-1):
-    for j in range(N-i-1):
-        if a[j] > a[j+1]:
-            a[j], a[j+1] = a[j+1], a[j]
- 
-print(a)
+
+def bubbleSort(nlist):
+    for passnum in range(len(nlist)-1,0,-1):
+        for i in range(passnum):
+            if nlist[i]>nlist[i+1]:
+                temp = nlist[i]
+                nlist[i] = nlist[i+1]
+                nlist[i+1] = temp
+nlist = [14,46,43,27,57,41,45,21,70]
+bubbleSort(nlist)
+print(nlist)
+
+flag = 0
+if(nlist== sorted(nlist)):
+
+    flag = 1
+
+      
+# результат печати
+
+if (flag) :
+
+    print ("Yes, List is sorted.")
+
+else :
+
+    print ("No, List is not sorted.")

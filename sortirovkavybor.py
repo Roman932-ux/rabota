@@ -1,4 +1,4 @@
-def selection_sort(arr):        
+﻿def selection_sort(arr):        
     for i in range(len(arr)):
         minimum = i
         
@@ -11,3 +11,4 @@ def selection_sort(arr):
         arr[minimum], arr[i] = arr[i], arr[minimum]
             
     return arr
+
